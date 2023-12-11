@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-project-normal-flow-check-2-prod
+  labels:
+    environment-id: env_33d804ba-9f83-4abf-b533-7b27999ca466
+    project-id: project_40190942-a07e-4c64-ae19-c48fc07c6763
+    project-name: test-project-normal-flow-check-2
+    environment-name: prod
+    organization-id: org_b90db410-70ec-4efc-955f-90fee843d8f8

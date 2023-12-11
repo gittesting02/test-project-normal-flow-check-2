@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-project-normal-flow-check-2-staging
+  labels:
+    environment-id: env_d7671201-7853-4644-b4b2-1ed931ca3c4f
+    project-id: project_40190942-a07e-4c64-ae19-c48fc07c6763
+    project-name: test-project-normal-flow-check-2
+    environment-name: staging
+    organization-id: org_b90db410-70ec-4efc-955f-90fee843d8f8
