@@ -1,0 +1,16 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations: {}
+  name: app-reinstall-test-app-v1-0-0
+  labels:
+    app: app-reinstall-test-app-v1-0-0
+    applicationId: app_578f2cb5-683c-45d1-b065-f3f025711b36
+    version: v1.0.0
+    organizationId: org_b90db410-70ec-4efc-955f-90fee843d8f8
+    projectId: project_40190942-a07e-4c64-ae19-c48fc07c6763
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: app-reinstall-test-app-v1-0-0

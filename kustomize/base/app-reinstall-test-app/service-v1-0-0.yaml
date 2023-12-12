@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: app-reinstall-test-app-v1-0-0
+    applicationId: app_578f2cb5-683c-45d1-b065-f3f025711b36
+    version: v1.0.0
+    organizationId: org_b90db410-70ec-4efc-955f-90fee843d8f8
+    projectId: project_40190942-a07e-4c64-ae19-c48fc07c6763
+  name: app-reinstall-test-app-v1-0-0
+spec:
+  selector:
+    app: app-reinstall-test-app-v1-0-0
