@@ -1,0 +1,48 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts:
+        - port: 123
+          targetPort: 123
+          protocol: UDP
+      healthChecks: []
+      name: test-app-chirath-44-main
+      imagePullPolicy: Always
+      imageRegistry: ecr/dfsfsdfdssdfsddfsdf
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: test-app-chirath-44
+    version: v1.0.0
+    applicationId: app_2fa75fee-a1fc-499a-8af5-b4fda1d8f64e
+    projectId: project_40190942-a07e-4c64-ae19-c48fc07c6763
+    organizationId: org_b90db410-70ec-4efc-955f-90fee843d8f8
+    environmentId: env_d7671201-7853-4644-b4b2-1ed931ca3c4f
+    environmentName: staging
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: test-app-chirath-44
+  cronTab: ''
+  serviceType: ClusterIP
+  version: v1.0.0
+  namespace: test-project-normal-flow-check-2-staging
