@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-hey
+  labels:
+    environment-id: env_4479528d-5cbf-428a-82f0-9a2263baa9b8
+    project-id: project_40190942-a07e-4c64-ae19-c48fc07c6763
+    project-name: test-project-normal-flow-check-2
+    environment-name: test-environment-2
+    organization-id: org_b90db410-70ec-4efc-955f-90fee843d8f8
