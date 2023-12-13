@@ -23,7 +23,7 @@ spec:
       healthChecks: []
       name: deploy-stats-check-app-main
       imagePullPolicy: Always
-      imageRegistry: check-app-stats
+      imageRegistry: check-app-stats-2
       commitDetails:
         commitHash: hash
         commitAvatar: avatar
