@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: adasdasasdasfsdffsdsdf1231233sdsdaasd
+    - imageTag: x-check-app
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -23,7 +23,7 @@ spec:
       healthChecks: []
       name: deploy-stats-check-app-main
       imagePullPolicy: Always
-      imageRegistry: jobrunnertestidsfsdmageregisasdasdtrynewurlsf2
+      imageRegistry: check-app-stats
       commitDetails:
         commitHash: hash
         commitAvatar: avatar
