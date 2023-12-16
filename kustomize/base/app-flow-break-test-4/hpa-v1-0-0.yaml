@@ -1,0 +1,16 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations: {}
+  name: app-flow-break-test-4-v1-0-0
+  labels:
+    app: app-flow-break-test-4-v1-0-0
+    applicationId: app_63973b05-414f-4fd2-b6d7-dd554cb1c0fb
+    version: v1.0.0
+    organizationId: org_b90db410-70ec-4efc-955f-90fee843d8f8
+    projectId: project_40190942-a07e-4c64-ae19-c48fc07c6763
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: app-flow-break-test-4-v1-0-0
