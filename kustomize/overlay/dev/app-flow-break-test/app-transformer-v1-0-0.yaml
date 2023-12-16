@@ -1,0 +1,45 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts: []
+      healthChecks: []
+      name: app-flow-break-test-main
+      imagePullPolicy: Always
+      imageRegistry: ecr/asdcxzczxc
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: app-flow-break-test
+    version: v1.0.0
+    applicationId: app_45cf2d4b-f602-458e-966a-860aeeea6e02
+    projectId: project_40190942-a07e-4c64-ae19-c48fc07c6763
+    organizationId: org_b90db410-70ec-4efc-955f-90fee843d8f8
+    environmentId: env_4fa33839-137b-4a90-a9b8-1b253bd8d2d5
+    environmentName: dev
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: app-flow-break-test
+  cronTab: ''
+  serviceType: ClusterIP
+  version: v1.0.0
+  namespace: test-project-normal-flow-check-2-dev
