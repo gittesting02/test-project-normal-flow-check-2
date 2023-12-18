@@ -32,7 +32,7 @@ spec:
   labels:
     app: app-flow-break-test-14
     version: v1.0.0
-    applicationId: app_b019bcaa-2ec4-4c97-98b6-2a7f5f79f792
+    applicationId: app_42005f66-d553-4c58-8ff7-5da1ecdb5bfc
     projectId: project_40190942-a07e-4c64-ae19-c48fc07c6763
     organizationId: org_b90db410-70ec-4efc-955f-90fee843d8f8
     environmentId: env_d7671201-7853-4644-b4b2-1ed931ca3c4f
