@@ -1,0 +1,46 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts: []
+      healthChecks: []
+      name: chirath-test-app-main
+      imagePullPolicy: Always
+      imageRegistry: ecr/asdasdasdasdads
+      credentialId: credential_82b584ce-5e2d-4bd6-8688-3330aa2793b0
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: chirath-test-app
+    version: v1.0.0
+    applicationId: app_6238e08c-8c63-4019-a245-ac8890c137d0
+    projectId: project_40190942-a07e-4c64-ae19-c48fc07c6763
+    organizationId: org_b90db410-70ec-4efc-955f-90fee843d8f8
+    environmentId: env_4fa33839-137b-4a90-a9b8-1b253bd8d2d5
+    environmentName: dev
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: chirath-test-app
+  cronTab: ''
+  serviceType: ClusterIP
+  version: v1.0.0
+  namespace: test-project-normal-flow-check-2-dev
